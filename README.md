@@ -11,7 +11,7 @@
 
 # 実行例
 
-![demo](https://raw.githubusercontent.com/ShiraoTakuya/TimeOfCountry/main/cap.PNG)
+![demo](https://raw.githubusercontent.com/ShiraoTakuya/TimeOfCountry/main/cap1.PNG)
 
 # Usage
 
