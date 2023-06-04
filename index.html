@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Real Time Clocks with Flags</title>
+
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: gray;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100vh;
+margin: 0;
+}
+
+.clock {
+font-size: 24px;
+margin-bottom: 20px;
+}
+
+img {
+width: 48px;
+height: 32px;
+margin-right: 16px;
+}
+</style>
+
+<script>
+function updateClocks() {
+const currentTime = new Date();
+
+const timezoneOffsets = {
+"japan": 540,
+"philippines": 480,
+"usa": -240,
+"indonesia": 420,
+"ukraine": 180,
+"south_africa": 120,
+"bangladesh": 360,
+};
+
+function getTimeAtLocation(location) {
+const offset = timezoneOffsets[location];
+const locationDate = new Date(currentTime);
+locationDate.setMinutes(currentTime.getMinutes() + offset);
+return locationDate.toISOString().substr(11, 8);
+}
+
+document.getElementById("japan-time").innerText = getTimeAtLocation("japan");
+document.getElementById("philippines-time").innerText = getTimeAtLocation("philippines");
+document.getElementById("usa-time").innerText = getTimeAtLocation("usa");
+document.getElementById("indonesia-time").innerText = getTimeAtLocation("indonesia");
+document.getElementById("ukraine-time").innerText = getTimeAtLocation("ukraine");
+document.getElementById("south_africa-time").innerText = getTimeAtLocation("south_africa");
+document.getElementById("bangladesh-time").innerText = getTimeAtLocation("bangladesh");
+}
+
+setInterval(updateClocks, 1000);
+</script>
+</head>
+<body onload="updateClocks();">
+<div class="clock">
+<img src="japan.png" alt="Japan Flag"> 日本: <span id="japan-time">-</span>
+</div>
+<div class="clock">
+<img src="philippines.png" alt="Philippines Flag"> フィリピン: <span id="philippines-time">-</span>
+</div>
+<div class="clock">
+<img src="usa.png" alt="USA Flag"> アメリカ(ワシントン): <span id="usa-time">-</span>
+</div>
+<div class="clock">
+<img src="indonesia.png" alt="Indonesia Flag"> インドネシア: <span id="indonesia-time">-</span>
+</div>
+<div class="clock">
+<img src="ukraine.png" alt="Ukraine Flag"> ウクライナ: <span id="ukraine-time">-</span>
+</div>
+<div class="clock">
+<img src="south_africa.png" alt="South Africa Flag"> 南アフリカ: <span id="south_africa-time">-</span>
+</div>
+<div class="clock">
+<img src="bangladesh.png" alt="Bangladesh Flag"> バングラディッシュ: <span id="bangladesh-time">-</span>
+</div>
+</body>
+</html>
