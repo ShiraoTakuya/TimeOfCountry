@@ -19,9 +19,8 @@ http://genuine.php.xdomain.jp/TimeOfCountry/index.html
 
 # Usage
 
-全てのファイルをサーバーに配置する
-
-index.htmlにアクセスする
+* 全てのファイルをサーバーに配置する
+* index.htmlにアクセスする
  
 # Note
  
