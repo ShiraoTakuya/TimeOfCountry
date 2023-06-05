@@ -14,11 +14,13 @@
 ![demo](https://raw.githubusercontent.com/ShiraoTakuya/TimeOfCountry/main/cap1.PNG)
 
 以下にアクセスすると動作確認できます
+
 http://genuine.php.xdomain.jp/TimeOfCountry/index.html
 
 # Usage
 
 全てのファイルをサーバーに配置する
+
 index.htmlにアクセスする
  
 # Note
