@@ -41,6 +41,7 @@ const timezoneOffsets = {
 "ukraine": 180,
 "south_africa": 120,
 "bangladesh": 360,
+"luxembourg": 120,
 };
 
 function getTimeAtLocation(location) {
@@ -57,6 +58,7 @@ document.getElementById("indonesia-time").innerText = getTimeAtLocation("indones
 document.getElementById("ukraine-time").innerText = getTimeAtLocation("ukraine");
 document.getElementById("south_africa-time").innerText = getTimeAtLocation("south_africa");
 document.getElementById("bangladesh-time").innerText = getTimeAtLocation("bangladesh");
+document.getElementById("luxembourg-time").innerText = getTimeAtLocation("luxembourg");
 }
 
 setInterval(updateClocks, 1000);
@@ -83,6 +85,9 @@ setInterval(updateClocks, 1000);
 </div>
 <div class="clock">
 <img src="bangladesh.png" alt="Bangladesh Flag"> バングラディッシュ: <span id="bangladesh-time">-</span>
+</div>
+<div class="clock">
+<img src="luxembourg.png" alt="Bangladesh Flag"> ルクセンベルグ: <span id="luxembourg-time">-</span>
 </div>
 </body>
 </html>
